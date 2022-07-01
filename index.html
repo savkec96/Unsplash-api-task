@@ -16,10 +16,8 @@
   <body>
     <header class="header-section">
       <div class="header-content">
-        <p class="sub-heading">
-          unsplash api - infinite scroll
-        </p>
-        <form action="search.html">
+        <p class="sub-heading">unsplash api - infinite scroll</p>
+        <form action="search.html" class="search-container">
           <input
             type="text"
             autocomplete="off"
@@ -31,9 +29,58 @@
         </form>
       </div>
     </header>
-    <section class="gallery">
-      <!-- <img src="img/img (1).png" class="gallery-img" alt="" /> -->
-    </section>
+    <!-- Popup screen -->
+    <div class="overlay hidden"></div>
+    <div class="screen-popup hidden">
+      <ion-icon class="close-btn" name="close-circle-outline"></ion-icon>
+      <a href="#" class="download-btn">download image</a>
+      <img class="open-img" src="" alt="" />
+      <ion-icon
+        class="arrows left-arrow"
+        name="chevron-back-outline"
+      ></ion-icon>
+      <ion-icon
+        class="arrows right-arrow"
+        name="chevron-forward-outline"
+      ></ion-icon>
+      <div class="image-description">
+        <!-- <p class="desc-img">
+          <ion-icon name="download-outline"></ion-icon>Downloads:
+        </p>
+        <p class="desc-img">
+          <ion-icon name="heart-dislike-outline"></ion-icon>Likes:
+        </p>
+        <p class="desc-img">
+          <ion-icon name="person-outline"></ion-icon>Username:
+        </p>
+        <p class="desc-img">
+          <ion-icon name="person-circle-outline"></ion-icon>Name:
+        </p>
+        <p class="desc-img">
+          <ion-icon name="link-outline"></ion-icon>Portfolio URL:
+          <a class="img-link-portfolio" href=""></a>
+        </p> -->
+      </div>
+    </div>
+
+    <div class="preloader">
+      <img
+        class="loader-img"
+        src="img/Broken circle.gif"
+        alt="Circle loading"
+      />
+    </div>
+
+    <section class="gallery"></section>
+
     <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
